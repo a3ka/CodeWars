@@ -9,22 +9,25 @@
   <body >
 
   <script>
-    function sumMul(n,m){
-      let b = 0; 
-      let a = 0;
-      let c = Math.floor(m/n);
+
+    function getSum( a,b ) {
       
-      if (n > 0 && m > 0) {
-        for (i = 0; i < c; i++) {
-          b = b + n;
-          a = a + b;
-          console.log(a);
-        }
-        return a;
-      } else {
-        return "INVALID"
+      const array = [];
+      
+      for (let i = a; i <= b; i++) {
+        array.push(i);
       }
+      
     
+      if (a != b) {
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+          sum = sum + array[i];
+        }
+        return sum;
+      } else {
+        return a;
+      }
     }
   
   </script>
