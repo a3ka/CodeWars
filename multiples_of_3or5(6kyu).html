@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+
+<script>
+
+function solution(number) {
+  let three = []
+  let five = []
+  
+  
+  for (t = 0; t < number; t+=3) {three.push(t)}
+  for (f = 0; f < number; f+=5) {five.push(f)}
+  
+  for (let i = 0; i < five.length; i++) {
+    let count = 0
+    for (let index = 0; index < three.length; index++) {
+      if (five[i] === three[index]) {count+=1}
+    }
+    if (count === 0) {three.push(five[i])}
+  }
+
+
+  // let numbers = three.concat(five)
+  // const sum = numbers.reduce((a, b) => a + b)
+
+  let sum = 0;
+  for (let i = 0; i < three.length; i++) {
+    sum += three[i]
+}
+  return sum;
+}
+
+</script>
+
+<!--function solution(number){
+  var sum = 0;
+  
+  for(var i = 1;i< number; i++){
+    if(i % 3 == 0 || i % 5 == 0){
+      sum += i
+    }
+  }
+  return sum;
+} 
+} -->
+
+
+</html>
